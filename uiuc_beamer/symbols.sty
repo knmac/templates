@@ -1,0 +1,62 @@
+\makeatletter
+\usepackage{xspace}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\Abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\PartDev}[2]{\frac{\partial#1}{\partial #2}}
+\newcommand{\Expect}[1]{\mathbb{E}\left(#1\right)}
+\newcommand{\Set}[1]{\left\{#1\right\}}
+\newcommand{\List}[1]{\left[#1\right]}
+\newcommand{\thickhline}{\Xhline{3\arrayrulewidth}}
+
+\newcommand{\bx}{{\mathbf{x}}}
+\newcommand{\by}{{\mathbf{y}}}
+\newcommand{\bz}{{\mathbf{z}}}
+\newcommand{\br}{{\mathbf{r}}}
+\newcommand{\bw}{{\mathbf{w}}}
+\newcommand{\bh}{{\mathbf{h}}}
+\newcommand{\bs}{{\mathbf{s}}}
+\newcommand{\bu}{{\mathbf{u}}}
+\newcommand{\ty}{{\tilde{y}}}
+\newcommand{\hy}{{\hat y}}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+\newcommand{\lambdax}{\lambda_\bx}
+\newcommand{\lambdaz}{\lambda_\bz}
+
+\newcommand{\pdiff}[2]{\frac{\partial {#1}}{\partial {#2}}}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma-ap}{Lemma}
+\newtheorem{definition-ap}{Definition}
+\newtheorem{corollary-ap}{Corollary}
+\newtheorem{claim}{Claim}
+% \newtheorem{claim-ap}{Claim}
+\newtheorem{program}{Program}
+\newtheorem{property}{Property}
+
+\newcommand{\figref}[1]{Fig\onedot~\ref{#1}}
+\newcommand{\equref}[1]{Eq\onedot~\eqref{#1}}
+\newcommand{\secref}[1]{Sec\onedot~\ref{#1}}
+\newcommand{\tabref}[1]{Tab\onedot~\ref{#1}}
+\newcommand{\thmref}[1]{Theorem~\ref{#1}}
+\newcommand{\prgref}[1]{Program~\ref{#1}}
+\newcommand{\algref}[1]{Alg\onedot~\ref{#1}}
+\newcommand{\clmref}[1]{Claim~\ref{#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{#1}}
+\newcommand{\ptyref}[1]{Property\onedot~\ref{#1}}
+
+\def\eg{\textit{e.g}\onedot} \def\Eg{\textit{E.g}\onedot}
+\def\ie{\textit{i.e}\onedot} \def\Ie{\textit{I.e}\onedot}
+\def\cf{\textit{cf}\onedot} \def\Cf{\textit{Cf}\onedot}
+\def\etc{\textit{etc}\onedot} \def\vs{\textit{vs}\onedot}
+\def\wrt{w.r.t\onedot} \def\dof{d.o.f\onedot}
+\def\etal{\textit{et al}\onedot}
+
+\newcommand{\NOTE}[1]{~\textcolor{red}{[NOTE: #1]}}

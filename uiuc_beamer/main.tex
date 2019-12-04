@@ -1,0 +1,78 @@
+%\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{bbm}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{multirow, tabularx}
+\usepackage{soul}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{longtable}
+\usepackage{pgfpages}
+
+\usepackage{uiuc_theme}
+\usepackage{symbols}
+
+
+%-----------------------------------------------------------------------------------------
+% Some customization
+\AtBeginSection[]{
+    \begin{frame}
+        \vfill
+	\centering
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+	    \usebeamerfont{title}\insertsectionhead\par
+	\end{beamercolorbox}
+	\vfill
+    \end{frame}
+}
+
+\beamertemplatenavigationsymbolsempty 
+
+% \setbeameroption{hide notes} % Only slides
+% \setbeameroption{show only notes} % Only notes
+% \setbeameroption{show notes on second screen=right}  % uncomment this to compile notes
+
+
+%-----------------------------------------------------------------------------------------
+% Information
+\title[]{
+    \textcolor{white}{\textbf{Presentation Title}}
+}
+
+\author[]{Authors}
+
+\date{}
+
+\titlegraphic{
+    \includegraphics[height=1.5cm]{images/ui_logo.png}
+}
+
+%-----------------------------------------------------------------------------------------
+% Content
+\begin{document}
+    % Title page
+    \frame{\titlepage}
+	
+    % Table of contents
+    %\begin{frame}{Outline}
+    %    \tableofcontents
+    %\end{frame}
+	
+    % Content
+    \input{contents/contents.tex}
+    \frame{\centering \Huge \emph{Thank You}}
+    
+    % References
+    %\begin{frame}[t, allowframebreaks]{References}
+    %    \small
+    %    \bibliographystyle{ieee_fullname}
+    %    \bibliography{ref}
+    %\end{frame}
+\end{document}
