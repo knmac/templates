@@ -9,3 +9,5 @@ build:
 clean:
 	@echo "Cleaning up..."
 	rm $(OUTPUT)
+
+.PHONY: all build clean

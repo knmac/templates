@@ -1,10 +1,10 @@
 ---
 theme: metropolis
-title: test pandoc beamer
+title: pandoc beamer
 subtitle: subtitle
-author: Khoi-Nguyen Mac
+author: Khoi-Nguyen C. Mac
 institute: UIUC
-date: 10/10/2019
+date: 12/34/5678
 toc: false
 slide_level: 2
 header-includes: \metroset{progressbar=frametitle,sectionpage=progressbar}
