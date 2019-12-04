@@ -1,0 +1,150 @@
+%\documentclass[landscape,a0paper,fontscale=0.292]{baposter}
+\documentclass[landscape,paperwidth=182cm,paperheight=120cm, fontscale=0.17]{baposter}
+%[landscape,paperwidth=230cm,paperheight=111cm, fontscale=0.17]{baposter}
+
+% To be printed at 100%
+%\documentclass[landscape,paperwidth=119cm,paperheight=58cm, fontscale=0.33]{baposter}
+%\documentclass[landscape,paperwidth=60cm,paperheight=29cm, fontscale=0.66]{baposter}
+\usepackage{times}
+\usepackage{calc}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{relsize}
+\usepackage{multirow, tabularx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage[labelfont=bf]{caption}
+\usepackage[justification=centering]{caption}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{lipsum}
+\usepackage{mystyle}
+\usepackage{xspace}
+\usepackage{enumitem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+
+% \definecolor{UIUCOrange}{RGB}{242,99,34} %website orange
+\definecolor{UIUCOrange}{RGB}{232,74,39}
+% \definecolor{UIUCOrange}{RGB}{244,127,36} %official orange
+% \definecolor{UIUCBlue}{RGB}{0,60,125} %official blue
+\definecolor{UIUCBlue}{RGB}{19,41,75} 
+% \definecolor{UIUCBlue}{HTML}{13294b} 
+% \definecolor{UIUCBlue2}{RGB}{0,181,217} %website light blue
+\definecolor{emphcolor}{RGB}{0,60,125}
+
+\newcommand{\compresslist}{%
+    \setlength{\itemsep}{1pt}%
+    \setlength{\parskip}{0pt}%
+    \setlength{\parsep}{0pt}%
+}
+
+\newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
+
+% \renewcommand{\emph}[1]{{\color{UIUCOrange}\textbf{#1}}}
+\renewcommand{\emph}[1]{%
+    \textcolor{emphcolor}{\textbf{\textit{#1}}}%
+}
+
+%\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{poster}{
+    % Show grid to help with alignment
+    grid=false,
+    bgColorOne=white,
+    background=plain, %none,
+    boxshade=none,
+    columns=3,
+    % Column spacing
+    colspacing=0.7em,
+    % Color style
+    % headerColorOne=UIUCOrange!85!white!100!black,
+    % borderColor=UIUCOrange!120!white!120!black,
+    headerColorOne=UIUCOrange,
+    borderColor=UIUCOrange,
+    % Format of textbox
+    textborder=roundedleft, %faded,
+    % Format of text header
+    headerborder=open,
+    headershape=roundedright,
+    headershade=plain,
+    %background=none,
+    boxColorOne=white, %cyan!10!white,
+    headerheight=0.173\textheight,
+    % headerfont=\Large\textsf,
+}
+% Eye Catcher
+{
+    % \includegraphics[height=0.07\textheight]{templte_figs/uclogo_horz_bold}
+    \includegraphics[height=0.14\textheight]{templte_figs/logo_combine.png}
+    %Eye Catcher, empty if option eyecatcher=no
+}
+% Title
+{
+    % \vspace{0.5cm}
+    \sc \huge \textbf{Title} \\
+    Subtitle
+}
+% Authors
+{
+    \Large
+    \vspace{0.1cm}
+    Author1 \textsuperscript{1} \hspace{0.15cm}
+    Author2 \textsuperscript{2} \hspace{0.15cm}
+    Author3 \textsuperscript{1} \hspace{0.15cm}
+    Author4 \textsuperscript{2} \hspace{0.15cm}
+    Author5 \textsuperscript{2} \hspace{0.15cm}
+    Author6 \textsuperscript{1}
+    \\ %[0.5em]
+    %{\texttt{\{email, email, email\}@domain.edu}}
+    {
+        \vspace{-0.4cm}
+        \begin{center}
+            \textsuperscript{1} Affiliation1 \hspace{0.3cm}
+            \textsuperscript{2} Affiliation2
+        \end{center}
+        \vspace{-0.8cm}
+    }
+}
+% Logo
+{
+    %\hspace{-1.5cm}
+    \includegraphics[height=0.18\textheight]{templte_figs/logo_combine2.png}
+}
+\tikzstyle{light shaded}=[top color=baposterBGtwo!30!white,bottom color=baposterBGone!30!white,shading=axis,shading angle=30]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Motivation}{name=motivation,column=0,row=0}{
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Problem Formulation}{name=formulation,column=0,below=motivation,above=bottom}{
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Our Approach}{name=algorithm,column=1,row=0, bottomaligned=formulation}{
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Results}{name=results,column=2,span=1,row=0,bottomaligned=formulation}{
+
+}
+
+\end{poster}
+\end{document}
