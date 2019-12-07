@@ -27,13 +27,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
 
-% \definecolor{UIUCOrange}{RGB}{242,99,34} %website orange
 \definecolor{UIUCOrange}{RGB}{232,74,39}
-% \definecolor{UIUCOrange}{RGB}{244,127,36} %official orange
-% \definecolor{UIUCBlue}{RGB}{0,60,125} %official blue
 \definecolor{UIUCBlue}{RGB}{19,41,75} 
-% \definecolor{UIUCBlue}{HTML}{13294b} 
-% \definecolor{UIUCBlue2}{RGB}{0,181,217} %website light blue
 \definecolor{emphcolor}{RGB}{0,60,125}
 
 \newcommand{\compresslist}{%
@@ -44,12 +39,10 @@
 
 \newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
 
-% \renewcommand{\emph}[1]{{\color{UIUCOrange}\textbf{#1}}}
 \renewcommand{\emph}[1]{%
     \textcolor{emphcolor}{\textbf{\textit{#1}}}%
 }
 
-%\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 % Example definitions.
 % --------------------
 \def\x{{\mathbf x}}
@@ -91,7 +84,6 @@
 }
 % Title
 {
-    % \vspace{0.5cm}
     \sc \huge \textbf{Title} \\
     Subtitle
 }
@@ -118,7 +110,6 @@
 }
 % Logo
 {
-    %\hspace{-1.5cm}
     \includegraphics[height=0.18\textheight]{templte_figs/logo_combine2.png}
 }
 \tikzstyle{light shaded}=[top color=baposterBGtwo!30!white,bottom color=baposterBGone!30!white,shading=axis,shading angle=30]
@@ -136,7 +127,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Our Approach}{name=algorithm,column=1,row=0, bottomaligned=formulation}{
+\headerbox{Our Approach}{name=algorithm,column=1,row=0,bottomaligned=formulation}{
 
 }
 

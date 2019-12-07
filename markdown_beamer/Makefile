@@ -8,6 +8,6 @@ build:
 
 clean:
 	@echo "Cleaning up..."
-	rm $(OUTPUT)
+	rm -f $(OUTPUT)
 
 .PHONY: all build clean

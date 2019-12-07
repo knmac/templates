@@ -1,18 +1,23 @@
 ---
 theme: metropolis
+toc: false
+slide_level: 2
+output: beamer_presentation
+classoption: 'aspectratio=169'
+header-includes: \metroset{progressbar=frametitle,sectionpage=progressbar}
+
 title: pandoc beamer
 subtitle: subtitle
 author: Khoi-Nguyen C. Mac
 institute: UIUC
 date: 12/34/5678
-toc: false
-slide_level: 2
-header-includes: \metroset{progressbar=frametitle,sectionpage=progressbar}
 ---
 
 # Section 1
 
 ## Slide 1
+Command to build the output:
+
 ```bash
 pandoc [markdown_file.md] -t beamer -o [output_file.pdf]
 ```
