@@ -1,0 +1,108 @@
+\usetheme{AnnArbor}
+\usecolortheme{wolverine}
+
+%redefined colors for beamer
+\definecolor{beamer@UIUCblue}{RGB}{19,41,75}
+\definecolor{beamer@UIUCorange}{RGB}{232,74,39}
+% taken from
+% https://creativeservices.illinois.edu/brand/logos-and-colors.html
+
+\definecolor{beamer@UIUCgray}{RGB}{210,210,210}
+\definecolor{beamer@UIUCgray2}{RGB}{244,244,244}
+
+\setbeamercolor{frametitle}{fg=beamer@UIUCblue,bg=beamer@UIUCgray}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{title}{fg=white,bg=beamer@UIUCorange}
+\setbeamercolor{item projected}{fg=white,bg=beamer@UIUCorange}
+\setbeamercolor{caption name}{fg=beamer@UIUCblue}
+
+\renewcommand{\emph}[1]{{\color{beamer@UIUCorange}\textbf{#1}}}
+
+% Boxes
+\setbeamercolor{block title}{fg=beamer@UIUCblue,bg=beamer@UIUCorange}
+\setbeamercolor{block body}{fg=blue,bg=beamer@UIUCblue!80}
+\setbeamercolor{title in head/foot}{fg=beamer@UIUCblue,bg=beamer@UIUCgray}
+\setbeamercolor{author in head/foot}{fg=white,bg=beamer@UIUCblue}
+\setbeamercolor{institute in head/foot}{fg=white,bg=beamer@UIUCorange}
+\setbeamercolor{date in head/foot}{fg=white,bg=beamer@UIUCorange}
+\setbeamercolor{section in head/foot}{fg=white,bg=beamer@UIUCblue}
+\setbeamercolor{subsection in head/foot}{fg=white,bg=beamer@UIUCorange}
+
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=beamer@UIUCblue,
+    linkcolor=beamer@UIUCblue,% link color controls section, subsection, and title
+    citecolor=beamer@UIUCorange,
+    anchorcolor=beamer@UIUCorange}
+
+%override title link color
+\addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
+\addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
+
+% Setup blocks
+\setbeamercolor{block title}{fg=white, bg=beamer@UIUCblue}
+\setbeamercolor{block body}{fg=black,bg=beamer@UIUCgray2}
+
+\setbeamercolor{block title alerted}{fg=white, bg=beamer@UIUCorange}
+\setbeamercolor{block body alerted}{fg=black,bg=beamer@UIUCgray2}
+
+\setbeamercolor{block title example}{fg=beamer@UIUCblue, bg=beamer@UIUCgray}
+\setbeamercolor{block body example}{fg=black,bg=beamer@UIUCgray2}
+
+
+% Setup note pages
+\makeatletter
+\defbeamertemplate{note page}{infolines}
+{%
+  {%
+    \scriptsize
+    \insertvrule{.25\paperheight}{white!90!black}
+    \vskip-.25\paperheight
+    \nointerlineskip
+    \vbox{
+      \hfill\insertslideintonotes{0.25}\hskip-\Gm@rmargin\hskip0pt%
+      \vskip-0.25\paperheight%
+      \nointerlineskip
+      \begin{pgfpicture}{0cm}{0cm}{0cm}{0cm}
+        \begin{pgflowlevelscope}{\pgftransformrotate{90}}
+          {\pgftransformshift{\pgfpoint{-2cm}{0.2cm}}%
+          \pgftext[base,left]{\footnotesize\the\year-\ifnum\month<10\relax0\fi\the\month-\ifnum\day<10\relax0\fi\the\day}}
+        \end{pgflowlevelscope}
+      \end{pgfpicture}}
+    \nointerlineskip
+    \vbox to .25\paperheight{\vskip0.5em
+      \hbox{\insertshorttitle[width=8cm]}%
+      \setbox\beamer@tempbox=\hbox{\insertsection}%
+      \hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip4pt\raise3pt\hbox{\vrule
+            width0.4pt height7pt\vrule width 9pt
+            height0.4pt}}\hskip1pt\hbox{\begin{minipage}[t]{7.5cm}\def\breakhere{}\insertsection\end{minipage}}\fi%
+      }%
+      \setbox\beamer@tempbox=\hbox{\insertsubsection}%
+      \hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip17.4pt\raise3pt\hbox{\vrule
+            width0.4pt height7pt\vrule width 9pt
+            height0.4pt}}\hskip1pt\hbox{\begin{minipage}[t]{7.5cm}\def\breakhere{}\insertsubsection\end{minipage}}\fi%
+      }%
+      \setbox\beamer@tempbox=\hbox{\insertshortframetitle}%
+      \hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip30.8pt\raise3pt\hbox{\vrule
+            width0.4pt height7pt\vrule width 9pt
+            height0.4pt}}\hskip1pt\hbox{\insertshortframetitle[width=7cm]}\fi%
+      }%
+      \vfil}%
+  }%
+  \vskip.25em
+  \nointerlineskip
+  \begin{minipage}{\textwidth} % this is an addition
+  \insertnote
+  \end{minipage}               % this is an addition
+}
+\makeatother
+
+\setbeamertemplate{note page}[infolines]
+
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\usefonttheme[onlymath]{serif}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{caption}{size=\scriptsize}
+\captionsetup[subfigure]{font=scriptsize,labelfont=scriptsize}

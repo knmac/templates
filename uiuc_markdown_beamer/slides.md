@@ -1,21 +1,19 @@
 ---
-title: Title
+title: Presentation Title
 subtitle: Subtitle
-author: Author
+author: Khoi-Nguyen C. Mac
 institute: UIUC
-date: 12/34/5678
 
-theme: metropolis
+theme: AnnArbor
+colortheme: wolverine
 classoption: aspectratio=169
 slide_level: 2
-toc: false
+toc: true
 
 header-includes: 
-	- \metroset{progressbar=frametitle,sectionpage=progressbar}
-	- \setbeamerfont{footnote}{size=\tiny}
-	- \hypersetup{colorlinks,linkcolor=,urlcolor=blue}
-	- \setbeamerfont{caption}{size=\scriptsize}
-	- \usefonttheme[onlymath]{serif}
+	- \usepackage{uiuc_theme}
+	- \AtBeginSection[]{\begin{frame}\vfill \centering \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title} \usebeamerfont{title}\insertsectionhead \par \end{beamercolorbox} \vfill \end{frame} }
+	- \beamertemplatenavigationsymbolsempty
 ---
 
 # Section 1
