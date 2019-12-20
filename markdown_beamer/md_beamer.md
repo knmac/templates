@@ -1,5 +1,5 @@
 ---
-title: Title
+title: Presentation Title
 subtitle: Subtitle
 author: Author
 institute: UIUC
