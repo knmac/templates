@@ -2,18 +2,15 @@
 title: Presentation Title
 subtitle: Subtitle
 author: Khoi-Nguyen C. Mac
-institute: UIUC
 
-theme: AnnArbor
-colortheme: wolverine
 classoption: aspectratio=169
 slide_level: 2
 toc: true
 
 header-includes: 
 	- \usepackage{uiuc_theme}
+	- \titlegraphic{\centering \includegraphics[height=2cm]{ui_logo.png}}
 	- \AtBeginSection[]{\begin{frame}\vfill \centering \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title} \usebeamerfont{title}\insertsectionhead \par \end{beamercolorbox} \vfill \end{frame} }
-	- \beamertemplatenavigationsymbolsempty
 ---
 
 # Section 1
