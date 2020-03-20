@@ -8,7 +8,7 @@ slide_level: 2
 toc: true
 
 header-includes: 
-	- \usepackage{uiuc_theme}
+	- \usepackage{uiuc_theme, symbols, bbm}
 	- \titlegraphic{\centering \includegraphics[height=2cm]{ui_logo.png}}
 	- \AtBeginSection[]{\begin{frame}\vfill \centering \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title} \usebeamerfont{title}\insertsectionhead \par \end{beamercolorbox} \vfill \end{frame} }
 ---
@@ -30,7 +30,8 @@ pandoc [markdown_file.md] -t beamer -o [output_file.pdf]
 # Section 2
 ## Slide 3
 ### Slide 3.1
-$$E=mC^2$$
+$$E=mC^2, E \in \R$$
+
 
 ## Slide 4
 | a | b | c |
