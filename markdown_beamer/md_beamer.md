@@ -12,6 +12,7 @@ toc: false
 
 header-includes: 
 	- \metroset{progressbar=frametitle,sectionpage=progressbar}
+	- \usepackage{bbm}
 	- \setbeamerfont{footnote}{size=\tiny}
 	- \hypersetup{colorlinks,linkcolor=,urlcolor=blue}
 	- \setbeamerfont{caption}{size=\scriptsize}
@@ -35,7 +36,7 @@ pandoc [markdown_file.md] -t beamer -o [output_file.pdf]
 # Section 2
 ## Slide 3
 ### Slide 3.1
-$$E=mC^2$$
+$$E=mC^2, E \in \mathbb{R}$$
 
 ## Slide 4
 | a | b | c |

@@ -2,6 +2,7 @@
 title: Presentation Title
 subtitle: Subtitle
 author: Khoi-Nguyen C. Mac
+date: 12/34/5678
 
 classoption: aspectratio=169
 slide_level: 2
