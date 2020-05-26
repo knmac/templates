@@ -40,6 +40,18 @@
 \addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
 \addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
 
+% Beamer section title
+\AtBeginSection[]{
+    \begin{frame}
+        \vfill
+	\centering
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+	    \usebeamerfont{title}\insertsectionhead\par
+	\end{beamercolorbox}
+	\vfill
+    \end{frame}
+}
+
 % Setup blocks
 \setbeamercolor{block title}{fg=white, bg=beamer@UIUCblue}
 \setbeamercolor{block body}{fg=black,bg=beamer@UIUCgray2}

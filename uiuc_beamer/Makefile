@@ -28,8 +28,9 @@ force:
 clean:
 	$(LATEXMK) -C $(MAIN)
 	rm -f $(MAIN).pdfsync
+	rm -f $(MAIN).synctex.gz
 	rm -rf *~ *.tmp
-	rm -f *.bbl *.blg *.aux *.end *.fls *.log *.out *.fdb_latexmk
+	rm -f *.bbl *.blg *.aux *.end *.fls *.log *.out *.fdb_latexmk *.nav *.snm
 
 cont:
 	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) \

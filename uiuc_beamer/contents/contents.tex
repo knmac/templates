@@ -15,3 +15,35 @@
 	\note[item]{Note 1}
 	\note[item]{Note 2}
 \end{frame}
+
+\begin{frame}{}
+	\begin{table}
+		\begin{tabular}{c c c}
+			\thickhline
+			a & b & c \\
+			\hline
+			1 & 2 & 3 \\
+			4 & 4 & 6 \\
+			\thickhline
+		\end{tabular}
+		\caption{This is a table}
+		\label{tab:table1}
+	\end{table}
+
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{images/ui_logo.png}
+			\caption{left}
+			\label{sfig:figure1a}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.3\textwidth}
+			\includegraphics[width=\textwidth]{images/ui_logo.png}
+			\caption{right}
+			\label{sfig:figure1b}
+		\end{subfigure}
+		\caption{This is a figure}
+		\label{fig:figure1}
+	\end{figure}
+\end{frame}
