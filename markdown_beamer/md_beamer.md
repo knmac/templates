@@ -1,7 +1,7 @@
 ---
 title: Presentation Title
 subtitle: Subtitle
-author: Author
+author: Khoi-Nguyen C. Mac
 institute: UIUC
 date: 12/34/5678
 
@@ -25,7 +25,7 @@ header-includes:
 Command to build the output:
 
 ```bash
-pandoc [markdown_file.md] -t beamer -o [output_file.pdf]
+pandoc [markdown_file.md] -f markdown -t beamer -o [output_file.pdf]
 ```
 
 ## Slide 2

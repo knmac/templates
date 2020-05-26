@@ -4,7 +4,7 @@ OUTPUT=slides.pdf
 all: build
 
 build:
-	pandoc $(INPUT) -t beamer -o $(OUTPUT)
+	pandoc $(INPUT) -f markdown -t beamer -o $(OUTPUT)
 
 clean:
 	@echo "Cleaning up..."

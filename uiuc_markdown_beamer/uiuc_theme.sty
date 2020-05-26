@@ -51,6 +51,10 @@
 \setbeamercolor{block body example}{fg=black,bg=beamer@UIUCgray2}
 
 
+% Setup Section page
+\AtBeginSection[]{\begin{frame}\vfill \centering \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title} \usebeamerfont{title}\insertsectionhead \par \end{beamercolorbox} \vfill \end{frame} }
+
+
 % Setup note pages
 \makeatletter
 \defbeamertemplate{note page}{infolines}
