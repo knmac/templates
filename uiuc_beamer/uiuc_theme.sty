@@ -12,11 +12,17 @@
 
 \setbeamercolor{frametitle}{fg=beamer@UIUCblue,bg=beamer@UIUCgray}
 \setbeamercolor{normal text}{fg=black}
-\setbeamercolor{title}{fg=beamer@UIUCblue,bg=beamer@UIUCorange}
+\setbeamercolor{title}{fg=white,bg=beamer@UIUCorange}
 \setbeamercolor{item projected}{fg=white,bg=beamer@UIUCorange}
 \setbeamercolor{caption name}{fg=beamer@UIUCblue}
 
-\renewcommand{\emph}[1]{{\color{beamer@UIUCorange}\textbf{#1}}}
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{itemize item}{\color{beamer@UIUCorange}$\bullet$}
+\setbeamertemplate{itemize subitem}{\color{beamer@UIUCorange}$\circ$}
+\setbeamertemplate{itemize subsubitem}{\color{beamer@UIUCorange}$-$}
+
+\renewcommand{\emph}[1]{{\color{beamer@UIUCorange}\textit{#1}}}
+
 
 % Boxes
 \setbeamercolor{block title}{fg=beamer@UIUCblue,bg=beamer@UIUCorange}
@@ -29,7 +35,7 @@
 \setbeamercolor{subsection in head/foot}{fg=white,bg=beamer@UIUCorange}
 
 
-\hypersetup{%
+\hypersetup{
     colorlinks=true,
     urlcolor=beamer@UIUCblue,
     linkcolor=beamer@UIUCblue,% link color controls section, subsection, and title
@@ -40,18 +46,6 @@
 \addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
 \addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
 
-% Beamer section title
-\AtBeginSection[]{%
-    \begin{frame}
-        \vfill
-	\centering
-	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-	    \usebeamerfont{title}\insertsectionhead\par
-	\end{beamercolorbox}
-	\vfill
-    \end{frame}
-}
-
 % Setup blocks
 \setbeamercolor{block title}{fg=white, bg=beamer@UIUCblue}
 \setbeamercolor{block body}{fg=black,bg=beamer@UIUCgray2}
@@ -61,6 +55,10 @@
 
 \setbeamercolor{block title example}{fg=beamer@UIUCblue, bg=beamer@UIUCgray}
 \setbeamercolor{block body example}{fg=black,bg=beamer@UIUCgray2}
+
+
+% Setup Section page
+\AtBeginSection[]{\begin{frame}\vfill \centering \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title} \usebeamerfont{title}\insertsectionhead \par \end{beamercolorbox} \vfill \end{frame} }
 
 
 % Setup note pages
@@ -108,13 +106,12 @@
   \insertnote
   \end{minipage}               % this is an addition
 }
+
 \makeatother
-
 \setbeamertemplate{note page}[infolines]
-
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 \usefonttheme[onlymath]{serif}
 \setbeamerfont{footnote}{size=\tiny}
 \setbeamerfont{caption}{size=\scriptsize}
-\captionsetup[subfigure]{font=scriptsize,labelfont=scriptsize}
+%\captionsetup[subfigure]{font=scriptsize,labelfont=scriptsize}
