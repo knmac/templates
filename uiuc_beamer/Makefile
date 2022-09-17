@@ -3,8 +3,8 @@ LATEXOPT=--shell-escape
 NONSTOP=--interaction=nonstopmode
 
 LATEXMK=latexmk
-LATEXMKOPT=-pdf
-CONTINUOUS=-pvc
+LATEXMKOPT=-pdf -silent
+CONTINUOUS=-pvc -view=none
 
 MAIN=main
 SOURCES=$(MAIN).tex Makefile contents/*.tex
